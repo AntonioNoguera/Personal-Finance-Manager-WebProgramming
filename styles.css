@@ -1,0 +1,570 @@
+*{
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    outline: none;
+}
+
+body{
+    overflow-y: hidden; overflow-x: hidden;
+    background-image: radial-gradient(white,#8DFF89);
+    min-height:100vh;
+
+    background-attachment: fixed;
+}
+
+.Animaciones{
+    height: 450px; width: 450px;
+    background: radial-gradient(white,#8DFF89);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border:3px solid white;
+    box-shadow: 0px 0px 20px;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.circuloA{
+    height: 450px; width: 450px;
+    animation-name: circuloA;
+}
+.circuloB{
+    height: 600px; width: 600px;
+    animation-name: circuloB;
+    animation-delay: .5s;
+}
+.circuloC{
+    height: 900px; width:900px;
+    animation-name: circuloC;
+    animation-delay: 1s;
+}
+.circuloD{
+    height: 1200px; width: 1200px;
+    animation-name: circuloD;
+    animation-delay: 1.5s
+}
+
+@keyframes circuloA{
+    0%  {width:450px ;height:450px;}
+    50% {width:550px ;height:550px;}
+    100%{width:450px ;height:450px;}
+}
+@keyframes circuloB{
+    0%  {width:600px ;height:600px;}
+    50% {width:750px ;height:750px;}
+    100%{width:600px ;height:600px;}
+}
+@keyframes circuloC{
+    0%  {width:900px ;height:900px;}
+    50% {width:1000px;height:1000px;}
+    100%{width:900px ;height:900px;}
+}
+@keyframes circuloD{
+    0%  {width:1200px ;height:1200px;}
+    50% {width:1350px ;height:1350px;}
+    100%{width:1200px ;height:1200px;}
+}
+
+#formulario{
+    z-index: 3;
+    background: radial-gradient(#dcffdb,#8DFF89);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border:3px solid white;
+    width: 450px;
+    height:540px;
+    color:white;
+    display:inline-block;
+    color:white;
+    font-size: 20px;
+    border-radius:80px; 
+    text-shadow: 0px 0px 10px black;
+    transition:height .30s, width .40s;
+}
+
+.difuminador{
+    position: fixed;
+    width: 100%;
+    min-height:100vh;
+    background: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+button,input{
+    margin-top: 7px;
+    margin-bottom:7px;
+    width:70%;
+    margin-left:0px;
+    margin-right: 0px;
+    border:1px solid gray;
+}
+
+input[type=text],select{
+    border:1px solid gray;
+    border-radius: 10px;
+    transition: margin-Left .20s;
+}
+
+button{
+    margin-bottom: 1em;
+    cursor:pointer;
+}
+
+.titulo{
+    font-size:50px;
+    font-weight: 800;
+    background:-webkit-linear-gradient(45deg, #CFCFCF,gray );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    padding:0 15px 0 15px;
+}
+
+.titulo:hover{
+    cursor: pointer;
+}
+
+.labels{
+    text-shadow: 0px 0px 8px black;
+    color:white;
+    font-weight: 450;
+}
+
+select{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#recibo {
+    width: auto;
+}
+
+#A{
+    display: inline-block;
+    opacity: 1;
+    transition:opacity .5s;
+}
+#B{
+    display: none;
+    opacity: 0;
+    transition:opacity .5s;
+}
+
+#contrass{
+    width: 71%;
+    display: inline-flex;
+    text-align: center;
+
+}
+.sender{
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.registros{
+    max-width: 50px;
+    min-width: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#tablaDeRegistros{
+    z-index: 2;
+    background: radial-gradient(#dcffdb,#8DFF89);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border:3px solid white;
+    width: 1px;
+    height:1px;
+    box-shadow: 0px 0px 20px ;
+    display:none;
+    color:white;
+    font-size: 20px;
+    border-radius:80px; 
+    text-shadow: 0px 0px 10px black;
+    text-align: center;
+    transition:height .30s,width .40s;
+}
+
+#contenidoFormB{
+    display: none;
+    opacity:0;
+    transition:.5s;
+}
+
+#contenidoFormA{
+    display: inline-block;
+    opacity:1;
+    transition:.5s;
+} 
+
+    ul{
+    width: 100%;
+    margin: 0; 
+    list-style-type: none; 
+    height: auto;
+    transition: height 1s;
+    padding: 3px 0px 3px 0px;
+} 
+
+li{
+    font-size: 20px;transition: height 1s;
+    background:gray;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0px 5px 0px;
+    padding: 3px 60px 3px 30px;
+    position: relative;
+    border-radius: 20px;
+    bottom:0;
+}
+
+#back,#next{
+    width:60px;
+    margin:5px 10px 5px 10px ;
+}
+
+#back{
+    opacity:0;
+    cursor:context-menu;
+}
+#paginas{
+    width:100px;
+    display: inline;
+} 
+
+.mensajesDeAlerta span{
+    color: rgb(104, 104, 104);
+    background: white;
+    width:200px;
+    border-radius:20px;
+    font-size: 20px;
+    opacity: 0;
+    position: absolute; 
+    transition: opacity .5s;
+}
+
+.mensajesDeAlerta:hover span{
+    opacity: 1;
+}  
+
+.mensajeA{
+    margin: -80px 0px 0 -170px ;
+}
+
+.alerta svg{
+height: 24px;
+width: 24px;
+margin:20px 0 0 7px;
+background: #E24040; 
+border-radius: 20px;
+position:absolute;
+fill:white;  
+opacity: 0;
+transition: opacity .2s;
+cursor:help; 
+}
+
+.alerta span{
+color: white;
+background: rgb(235, 75, 75);
+margin:17px 0 0 35px;
+width:360px;
+border-radius:20px;
+font-size: 20px;
+opacity: 0;
+position: absolute;
+transition: opacity .5s;
+}
+
+.equisde:hover span{
+    opacity: 1;
+    cursor:help;
+}  
+
+#cajaDeAyudas{
+    position: absolute;
+    z-index: 8;
+    right: 0;
+    font-size: 20px;
+    width: 345px;
+    background: white; 
+    cursor:pointer;
+    border-bottom-left-radius: 10px;
+}
+
+.ayudAct{
+margin-right:-310px;
+transition: margin-right .75s;
+transition-timing-function: ease;
+}
+
+.ayudAct:hover{
+margin-right:0;
+}
+
+.cajaDeAyudas{ 
+text-align: left;
+}
+
+.cajaDeAyudas svg , #CajaDeUsuario svg{
+fill:gray;
+margin: 3px 6px -5px 5px;
+transition: fill .5s;
+}
+
+
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(161, 161, 161);
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.botonBorrar{
+    width: 30px;
+    height: 30px;
+    margin: 0 0 -20px 6px;
+    padding:0 0 0 0;
+    position: absolute;
+    right:20px;
+    border:none;
+    background: none;
+}
+
+.botonBorrar svg{
+    width:25px;
+    height: 25px;
+    margin:0;
+    margin-bottom:7px;
+    padding:0;
+    fill:white;
+    transition:.20s fill;
+}
+
+.botonBorrar svg:hover{
+    fill:#ff8787;
+}
+
+#startup{
+    width: 600px;
+    height: 400px;
+    z-index: 10;
+    position: absolute;
+    
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+    background: white;
+    border-radius: 60px;
+    box-shadow: 0px 0px 600px 90px black;
+    border: white 5px solid;
+    background: radial-gradient(#dcffdb,#8DFF89);
+}
+
+.contenido{
+    font-size: 23px;
+}
+
+#menu{
+    width: 370px;
+    height: 180px;
+    z-index: 10;
+    position: absolute;
+    text-align: left;
+    top:33%; 
+    left: 20px;
+    padding: 0 5px 0 5px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    background: white;
+    border-radius:30px;
+    background: radial-gradient(#dcffdb,#8DFF89);
+    box-shadow: 0px 0px 20px ;
+    border:3px solid white;
+}
+
+.opcionTitulo{
+    font-size: 25px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.opcionMenu{
+    font-size: 20px;
+    text-align: left;
+    transition: padding-left .3s, color .5s;
+    cursor: pointer;
+}
+
+.opcionMenu:hover{
+    padding-left: 10px;
+}
+
+.seleccion{
+    color:gray;
+    padding-left: 10px;
+}
+
+hr{
+    height: 2px;
+    background-color: white;
+    width:120px;
+
+    border: none;
+    margin-left: 30px;;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.formularioDeRespaldo{
+    z-index: 4;
+    background: radial-gradient(#dcffdb,#8DFF89);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border:3px solid white;
+    width: 450px;
+    height:540px;
+    color:white;
+    display:none; 
+    color:white;
+    font-size: 20px;
+    border-radius:80px; 
+    text-shadow: 0px 0px 10px black;
+    transition:height .30s, width .40s;
+}
+
+#inicioSessionGoogle{
+    width:50px;
+    border-radius:10px;
+    height: 50px;
+    margin:0;
+    padding:0;
+}
+
+#inicioSessionGoogle img{
+    width:40px;
+    height: 40px;
+    margin: 0;
+    padding:0; 
+    margin-bottom:-10px;
+} 
+
+#userId{
+    width:59%;
+}
+
+#CajaDeUsuario{
+    position: absolute;
+    z-index: 8;
+    right: 0;
+    top:30px;
+    font-size: 20px;
+    width: 345px;
+    background: white; 
+    cursor:pointer;
+    border-top-left-radius: 10px;
+    text-align:left;
+    border-bottom-left-radius: 10px;
+    margin-right:-310px;
+    border-top:1px gray solid;
+    transition:margin-right .75s;
+}
+
+#CajaDeUsuario:hover{
+    margin-right:0px;
+}
+
+#valorDelUsuario{
+    font-size: 20px;
+}
+
+#form4{
+    position:absolute;
+}
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#logggout{
+    position:absolute;
+    right:0;
+}
+
+#logggout svg{
+    fill:gray;
+    cursor:pointer;
+    margin: 3px 6px -5px 5px;
+    transition: fill .5s;
+}
+
+#logggout svg:hover{
+    fill: #E72B03;
+    margin: 3px 6px -5px 5px;
+    transition: fill .5s;
+}
