@@ -223,7 +223,7 @@ function cambioDeDisplay(){
 
     OcultarMostrar("A",A);OcultarMostrar("B",B);
 
-    flagA = (flagA)? 0 : 1;
+    flagA = flagA ? 0 : 1;
 
     saldo(); limpiarTodo();
 }
